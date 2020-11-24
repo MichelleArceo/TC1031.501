@@ -1,5 +1,5 @@
 /*
-Programa para analizar logs de intentos fallidos de ingreso (bitacora2.txt).
+Programa para analizar logs de intentos fallidos de ingreso (bitacora3.txt).
 
     Matías Kochlowski – a01625364
     Esteban Sánchez - a01251440
