@@ -1,9 +1,11 @@
-# Evidencia Competencia - Actividad Integral 3.4 #
-> Actividad Integral de Árbol Heap
+# Evidencia Competencia - Actividad Integral 4.3 #
+> Actividad Integral de Grafos
 
 ### Tareas ###
-1. Abra el archivo de entrada que será el resultado de la actividad integradora anterior. Agregue todos los accesos por ip y almacénelos en una estructura tipo Árbol heap dónde la llave será el número de accesos y el valor es la dirección IP.
-2. Encuentre las cinco IPs con más accesos.
+1. Abra el archivo de entrada llamado "bitacora3.txt" lealo y almacene los datos en en una lista de adyacencia organizada por dirección de ip origen (Formato del archivo bitacora.pdf).
+2. Determine los puertos con intentos de acceso
+3. ¿Qué puertos  presentan la mayor cantidad de intentos de acceso (ataques)?
+4. ¿Qué dirección ip presumiblemente se encuentra más vulnerable?
 
 ### Subcompetencias Evaluadas ###
 > SICT0301B - Evalúa los componentes que integran una problemática de acuerdo a principios y procesos computacionales.
@@ -14,7 +16,7 @@
 ### Estuctura de Archivos ###
 - main.cpp
 - input
-    - bitacora2.txt
+    - bitacora3.txt
 - output
     - (acá se generarán el CSV con las cinco IPs con más accesos)
 - .gitignore
