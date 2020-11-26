@@ -16,6 +16,7 @@ Creación: Jueves, 29 de Octubre
 #include <iterator>
 #include <map>
 
+// Correr el programa dos veces para desplegar el archivo heapTree.txt final
 using namespace std;
 
 // Archivo de ingreso raw
