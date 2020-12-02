@@ -72,9 +72,13 @@ class hashingFunction {
         void displayChain()
         {
         ofstream TableHashing;
-        TableHashing.open ("output/hashing.txt");
+        TableHashing.open ("output/TablaHashing.txt");
             for (int i = 0; i < BUCKET; i++) {
+                cout << "[ " << i << " ]";
                 TableHashing << "[ " << i << " ]";
+                for (auto x : table[i])
+                cout << " --> " << x;
+                cout << endl << "\n";
                 for (auto x : table[i])
                 TableHashing << " --> " << x;
                 TableHashing << endl << "\n";
@@ -82,6 +86,7 @@ class hashingFunction {
          TableHashing.close();
         }
 
+        // Funcion que hace conteo de los puertos
         void count_occurrence(vector<int>& puertos)
         {
             for (auto x = puertos.begin(); x != puertos.end(); ++x)
@@ -90,9 +95,13 @@ class hashingFunction {
             }
         }
 
+        // Desplegar el conteo de puertos y direccion ip
         void desplegar_contado(int x)
         {
-            cout << x << " fue accesado: " << contado[x] << endl;
+            ofstream SearchPort;
+            SearchPort.open("output/ResumenPuerto.txt");
+            cout << x << " fue accesado: " << contado[x] << endl << "\n";
+            SearchPort << x << " fue accesado: " << contado[x] << endl << "\n";
 
             ifstream bitacora2("input/bitacora3.txt");
             string line2;
@@ -111,8 +120,12 @@ class hashingFunction {
                 if (x == k)
                 {
                     cout << ip << endl;
+                    SearchPort << ip << endl;
+                    cout << "\n";
                 }
             }
+            cout << "En el archivo ResumenPuerto.txt podra encontrar el resumen del puerto " << x << " tambien" << endl;
+            SearchPort.close();
         }
 };
 
@@ -129,7 +142,6 @@ int main() {
     vector<int> puertos;
     int y;
 
-
     cout << "-------------------------Actividad 5.2---------------------------\n";
     cout << "----------------------------Puertos------------------------------\n";
     cout << "   Este programa realiza una tabla de hash en el cual se ordenan los\n";
@@ -142,7 +154,7 @@ int main() {
 
     string line;
     ofstream TableHashing;
-    TableHashing.open("output/hashing.txt");
+    TableHashing.open("output/TablaHashing.txt");
     while(getline(bitacora, line)) {
         int n = sizeof(arr)/sizeof(arr[0]);
         stringstream ss(line);
@@ -157,13 +169,17 @@ int main() {
         hashing.insertar(x);
         puertos.push_back(x);
     }
+    // Crea la tabla Hash
+    hashing.tablaEncadena();
+    cout << "En el archivo TablaHashing.txt podra encontrar la tabla hash tambien" << endl;
+    // Cuenta los puertos
     hashing.count_puertos(puertos);
+    cout << "\n";
     cout << "Buscar puerto: ";
     cin >> y;
     cout << endl;
+    // Imprime el resumen del puerto
     hashing.print(y);
-    // Crea la tabla Hash
-    hashing.tablaEncadena();
     TableHashing.close();
     return 0;
 }
