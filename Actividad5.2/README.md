@@ -1,11 +1,10 @@
-# Evidencia Competencia - Actividad Integral 4.3 #
-> Actividad Integral de Grafos
+# Evidencia Competencia - Actividad Integral 5.2 #
+> Actividad Integral sobre el uso de códigos hash
 
 ### Tareas ###
-1. Abra el archivo de entrada llamado "bitacora3.txt" lealo y almacene los datos en en una lista de adyacencia organizada por dirección de ip origen (Formato del archivo bitacora.pdf).
-2. Determine los puertos con intentos de acceso
-3. ¿Qué puertos  presentan la mayor cantidad de intentos de acceso (ataques)?
-4. ¿Qué dirección ip presumiblemente se encuentra más vulnerable?
+1. Lea el archivo de entrada "bitacora3.txt" (Formato del archivo bitacora.pdf).
+2. Crear una tabla hash cuya llave sea el puerto y cuyo valor sea un resumen de ese puerto. Este resumen deberá incluir, el número de accesos, el número de conexiones (ip únicos) así como las ips de origen.
+3. Realiza un método que dado un nombre del puerto regrese el valor asociado a él desplegando la información de una manera adecuada
 
 ### Subcompetencias Evaluadas ###
 > SICT0301B - Evalúa los componentes que integran una problemática de acuerdo a principios y procesos computacionales.
@@ -18,7 +17,7 @@
 - input
     - bitacora3.txt
 - output
-    - (acá se generarán el CSV con las cinco IPs con más accesos)
+    - (acá se generarán el TXT con las tablas Hash y el resultado de busqueda del puerto)
 - .gitignore
 - README.md
 - reflexiones
