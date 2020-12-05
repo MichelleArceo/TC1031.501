@@ -18,7 +18,7 @@
 - input
     - bitacora3.txt
 - output
-    - (acá se generarán el CSV con las cinco IPs con más accesos)
+    - (acá se generarán el CSV con los 10 ipAddress de mayores accesos y puertos)
 - .gitignore
 - README.md
 - reflexiones
